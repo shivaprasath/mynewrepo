@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+* {
+  box-sizing: border-box;
+}
+
+
+.box {
+  padding: 2em;
+  border: 1px solid #ccc;
+  display: block;
+  border-top-color: #4c4c4c;
+  border-top-width: medium;
+  float: left;
+  margin: -1px 0 0 -1px;
+  color: black;
+  background: linear-gradient(
+     white, white 50%, #333 50%, #333
+  );
+  background-size: 100% 202%;
+  transition: all 0.2s ease;
+  animation: down-bump 0.4s ease;
+  
+      border-radius: 4px;
+    height: 100%;
+    padding: 3rem;
+    text-align: center;
+	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025);
+}
+
+.box:hover {
+  background-position: 100% 100%;
+  animation: up-bump 0.4s ease;
+}
+
+.box:hover header {
+  color: white;
+}
+.box:hover p {
+  color: white;
+}
+
+@keyframes up-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 1.5em; }
+  100% { padding-top: 2em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 2em; }
+  50% { padding-top: 2.5em; }
+  100% { padding-top: 2em; }
+}
